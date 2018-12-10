@@ -1,4 +1,7 @@
-for f in ./*/; do
-        ./HCTSA_run.sh
-        printf '%s\n' "--------------------------------------$(pwd) Complete--------------------------------------"
+for d in */ ; do
+	cd "$d"
+	./HCTSA_run.sh 
+	printf "Complete: "
+	pwd
+	cd ..
 done
